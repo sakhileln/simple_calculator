@@ -1,4 +1,13 @@
-from helper import get_input, addition, subtract, multiply, division
+from helper import (
+    get_input,
+    addition,
+    subtract,
+    multiply,
+    division,
+    int_division,
+    modulo_division,
+    check_division_zero,
+)
 import sys
 
 print("Welcome to the Calculator App")
@@ -18,15 +27,15 @@ def main() -> None:
         case "-":
             result = subtract(number1, number2)
         case "/":
-            while number2 == 0:
-                try:
-                    number2 = int(input("Enter any number excluding zero: "))
-                except Exception as e:
-                    print(f"Error: Invalid input: {e}")
-                    
+            number2 = check_division_zero(number2)
             result = division(number1, number2)
+        case "//":
+            number2 = check_division_zero(number2)
+            result = int_division(number1, number2)
         case "*":
             result = multiply(number1, number2)
+        case "%":
+            result = modulo_division(number1, number2)
         case _:
             print("Invalid operand")
     print(f"Result is: {result}")
