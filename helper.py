@@ -27,6 +27,17 @@ def get_input() -> tuple[int, str, int]:
     return (number1, operand, number2)
 
 
+def check_division_zero(n: int) -> int:
+    if n != 0:
+        return n
+    while n == 0:
+        try:
+            n = int(input("Enter any number excluding zero: "))
+        except Exception as e:
+            print(f"Error: Invalid input: {e}")
+    return n
+
+
 def addition(a: int, b: int) -> int:
     return a + b
 
@@ -42,8 +53,10 @@ def division(a: int, b: int) -> float:
 def multiply(a: int, b: int) -> int:
     return a * b
 
+
 def int_division(a: int, b: int) -> int:
     return a // b
+
 
 def modulo_division(a: int, b: int) -> int:
     return a % b
