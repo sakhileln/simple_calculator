@@ -23,7 +23,7 @@ def main() -> None:
                     number2 = int(input("Enter any number excluding zero: "))
                 except Exception as e:
                     print(f"Error: Invalid input: {e}")
-
+                    
             result = division(number1, number2)
         case "*":
             result = multiply(number1, number2)
