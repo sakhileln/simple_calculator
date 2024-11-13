@@ -18,7 +18,7 @@ def get_input() -> tuple[int, str, int]:
                 str(expression[1]),
                 int(expression[2]),
             )
-            if operand not in ["+", "-", "*", "/"]:
+            if operand not in ["+", "-", "*", "/", "//", "%"]:
                 raise ValueError
 
             break
