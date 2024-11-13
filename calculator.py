@@ -28,7 +28,7 @@ def main() -> None:
             result = subtract(number1, number2)
         case "/":
             number2 = check_division_zero(number2)
-            result = division(number1, number2)
+            result = int(division(number1, number2))
         case "//":
             number2 = check_division_zero(number2)
             result = int_division(number1, number2)
