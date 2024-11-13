@@ -41,3 +41,9 @@ def division(a: int, b: int) -> float:
 
 def multiply(a: int, b: int) -> int:
     return a * b
+
+def int_division(a: int, b: int) -> int:
+    return a // b
+
+def modulo_division(a: int, b: int) -> int:
+    return a % b
